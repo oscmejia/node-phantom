@@ -1,19 +1,19 @@
 {
-  "author": "Alex Scheel Meyer (http://www.linkedin.com/in/alexscheelmeyer)",
-  "name": "node-phantom",
+  "author": "Oscar Mejia based on Alex Scheel Meyer's work",
+  "name": "node-phantom-mod",
   "description": "bridge between node.js and PhantomJS",
   "version": "0.2.3",
   "homepage": "https://github.com/alexscheelmeyer/node-phantom",
   "repository": {
     "type": "git",
-    "url": "git://github.com/alexscheelmeyer/node-phantom.git"
+    "url": "git://github.com/oscmejia/node-phantom.git"
   },
   "main": "node-phantom.js",
   "scripts": {
     "test": "mocha"
   },
-  "dependencies": {"socket.io": ">=0.9.6"},
-  "devDependencies": {"socket.io": ">=0.9.2"},
+  "dependencies": {"socket.io": "1.0.0"},
+  "devDependencies": {"socket.io": "1.0.0"},
   "optionalDependencies": {},
   "engines": {
     "node": "*"

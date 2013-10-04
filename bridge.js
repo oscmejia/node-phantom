@@ -107,6 +107,15 @@ controlpage.onAlert=function(msg){
 			page.render(request[3]);
 			respond([id,cmdId,'pageRendered']);
 			break;
+		case 'pageSize':			
+			page.paperSize = request[3];
+			break;
+		case 'viewportSize':
+			page.viewportSize = request[3];
+			break;
+		case 'content':
+			page.content = request[3];
+			break;  			
 		case 'pageRenderBase64':
 			var result=page.renderBase64(request[3]);
 			respond([id,cmdId,'pageRenderBase64Done', result]);

@@ -33,9 +33,6 @@ module.exports={
 				return console.warn('phantom stderr: '+data);
 			});
 			var exitCode=0;
-			phantom.on('error',function(){
-				exitCode=-1;
-			});
 			phantom.on('exit',function(code){
 				exitCode=code;
 			});
@@ -98,6 +95,15 @@ module.exports={
 							},
 							render:function(filename,callback){
 								request(socket,[id,'pageRender',filename],callbackOrDummy(callback));
+							},
+							paperSize:function(size){
+								request(socket,[id,'pageSize',size],callbackOrDummy(callback));
+							},
+							viewportSize:function(portSize){
+								request(socket,[id,'viewportSize',portSize],callbackOrDummy(callback));
+							},
+							content:function(htmlString){
+								request(socket,[id,'content',htmlString],callbackOrDummy(callback));	
 							},
 							renderBase64:function(extension,callback){
 								request(socket,[id,'pageRenderBase64',extension],callbackOrDummy(callback));
